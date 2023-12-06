@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  --font-family: "Bricolage Grotesque", sans-serif;
+}
+
+html,
+body {
+  font-size: 15px;
+  font-weight: normal;
+  height: 100%;
+  width: 100%;
+  color: #fff;
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  overflow: hidden;
+  background: rgb(255, 0, 215);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 0, 215, 1) 0%,
+    rgba(154, 0, 255, 1) 100%
+  );
+  overflow-y: scroll;
+  font-family: var(--font-family);
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  overflow: hidden;
+}
+
+html {
+  box-sizing: border-box;
+  margin-right: 0px !important;
+  height: -webkit-fill-available;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  min-height: -webkit-fill-available;
+  opacity: 0;
+}
+
+section .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+section .content p {
+  display: block;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 400;
+  max-width: 65ch;
+  color: #fff;
+}
+
+section .content p a {
+  color: #fff;
+  font-weight: 500;
+}
+
+h1,
+h2 {
+  font-family: var(--font-family);
+}
+
+section h1,
+section p {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 100px;
+  font-size: 115px;
+  line-height: 111px;
+  font-weight: 500;
+}
+
+section h2 {
+  position: absolute;
+  left: 100px;
+  bottom: 120px;
+  font-size: 50px;
+  line-height: 60px;
+  font-weight: 300;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.logo {
+  position: absolute;
+  display: block;
+  right: 55px;
+  top: 55px;
+  width: 200px;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  position: absolute;
+  right: 55px;
+  bottom: 45px;
+}
+
+p a,
+ul li,
+ul li a {
+  opacity: 1;
+  text-decoration: none;
+  transition: opacity 0.6s ease-in-out;
+}
+
+p a:hover,
+ul li a:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+ul li,
+ul li a {
+  font-size: 15px;
+  color: #fff;
+  font-weight: 300;
+}
+
+ul li {
+  padding: 0 8px;
+}
+
+@media only screen and (max-height: 850px) {
+  section h2 {
+    bottom: 80px;
+    font-size: 50px;
+  }
+  section h1 {
+    font-size: 120px;
+    line-height: 110px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  section h1,
+  section p {
+    padding-left: 60px;
+  }
+  section .content p {
+    font-size: 20px;
+  }
+  section h1 {
+    font-size: 105px;
+    line-height: 95px;
+  }
+  section h2 {
+    left: 60px;
+    font-size: 40px;
+    bottom: 90px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .logo {
+    left: 55px;
+    right: auto;
+  }
+  section h1 {
+    font-size: 100px;
+    line-height: 90px;
+  }
+  section h2 {
+    bottom: 130px;
+  }
+  ul {
+    left: 55px;
+    right: auto;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .logo {
+    left: 25px;
+    top: 25px;
+    width: 150px;
+  }
+  section .content p {
+    font-size: 16px;
+  }
+  section h1,
+  section p {
+    padding-left: 25px;
+  }
+  section h1 {
+    font-size: 52px;
+    line-height: 47px;
+  }
+  section h2 {
+    left: 25px;
+    font-size: 35px;
+    line-height: 42px;
+  }
+  ul {
+    left: 23px;
+    bottom: 25px;
+  }
+  ul li,
+  ul li a {
+    font-size: 12px;
+  }
+  ul li {
+    padding: 0px 3px;
+  }
+}
+
+@media only screen and (min-device-width: 365px) and (max-device-width: 900px) and (orientation: landscape) {
+  section h2 {
+    font-size: 30px;
+    line-height: 32px;
+    bottom: 60px;
+    display: none;
+  }
+}
+
+.fancy {
+  position: relative;
+  white-space: nowrap;
+}
+
+.fancy::after {
+  --deco-height: 0.3125em;
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: var(--deco-height);
+  bottom: calc(var(--deco-height) * -0.625);
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='64' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23a)'%3E%3Cpath d='M-17 30.5C-1 22 72-4 54 13 37.9 28.2-2.5 57.5 16 55.5s72-29 104-40' stroke='%23800080' stroke-width='10'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23fff' d='M0 0h100v64H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+  background-size: auto 100%;
+  background-repeat: round;
+  background-position: 0em;
+}

@@ -1,0 +1,45 @@
+gsap.to("section", {
+  opacity: 1,
+  duration: 0.2
+});
+
+gsap.from(".logo", {
+  opacity: 0,
+  delay: 0.5,
+  y: 25,
+  duration: 1
+});
+gsap.from("h1", {
+  opacity: 0,
+  delay: 0.7,
+  y: 25,
+  duration: 1
+});
+gsap.from("p", {
+  opacity: 0,
+  delay: 0.8,
+  y: 25,
+  duration: 1
+});
+gsap.from("h2", {
+  opacity: 0,
+  delay: 0.9,
+  y: 25,
+  duration: 1
+});
+
+gsap.from("ul", {
+  opacity: 0,
+  delay: 1.1,
+  y: 25,
+  duration: 1
+});
+$('body,section').css('height',$(window).innerHeight());
+function reportWindowSize() {
+  
+$('body,section').css('height',$(window).innerHeight());
+}
+
+window.onresize = reportWindowSize;
+
+  
